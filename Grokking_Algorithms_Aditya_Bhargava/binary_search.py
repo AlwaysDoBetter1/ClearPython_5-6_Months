@@ -14,10 +14,10 @@ def binary_search(list: list, item: (str, int)) -> int:  # annotations of types
         if guess == item:  # if element was found
             return mid  # return index and break while
         if guess > item:
-            # if the average is bigger than the desired value, cut off the right half of the list and find new average
+            # if the average is bigger than the desired value, cut off the left half of the list and find new average
             high = mid - 1
         else:
-            # if the average is lesser than the desired value, cut off the left half of the list and find new average
+            # if the average is lesser than the desired value, cut off the right half of the list and find new average
             low = mid + 1
     return None  # if element not found
 
